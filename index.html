@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mango Arty4 MGRS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header class="app-header">
+            <h1>Mango Arty4 MGRS</h1>
+            <p>โปรแกรมคำนวณระยะและทิศทางจากพิกัด MGRS</p>
+        </header>
+
+        <section class="input-card">
+
+            <label for="mgrsPoint1">พิกัดจุดที่ 1</label>
+            <input
+                type="text"
+                id="mgrsPoint1"
+                placeholder="ตัวอย่าง 48Q TC 12345 67890"
+                autocomplete="off"
+            >
+
+            <label for="mgrsPoint2">พิกัดจุดที่ 2</label>
+            <input
+                type="text"
+                id="mgrsPoint2"
+                placeholder="ตัวอย่าง 48Q TC 13000 68500"
+                autocomplete="off"
+            >
+
+            <div class="button-group">
+                <button id="calculateButton" type="button">
+                    คำนวณ
+                </button>
+
+                <button id="clearButton" type="button">
+                    ล้างข้อมูล
+                </button>
+            </div>
+
+        </section>
+
+        <section class="result-card">
+
+            <h2>ผลการคำนวณ</h2>
+
+            <div class="result-row">
+                <span>ระยะทาง</span>
+                <strong id="distanceResult">0 เมตร</strong>
+            </div>
+
+            <div class="result-row">
+                <span>ทิศทางองศา</span>
+                <strong id="degreeResult">0.000°</strong>
+            </div>
+
+            <div class="result-row">
+                <span>ทิศทางมิลเลียม</span>
+                <strong id="milResult">0000 มิล</strong>
+            </div>
+
+            <div class="result-row">
+                <span>ทิศกลับ</span>
+                <strong id="reverseMilResult">0000 มิล</strong>
+            </div>
+
+            <p id="messageBox" class="message-box"></p>
+
+        </section>
+
+        <footer class="app-footer">
+            <p>ใช้สูตร: มิลเลียม = องศา ÷ 0.05625</p>
+        </footer>
+
+    </main>
+<script src="lib/mgrs.min.js"></script>
+<script src="lib/proj4.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

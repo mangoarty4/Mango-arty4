@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Tahoma, sans-serif;
+    background: #eef2f5;
+    color: #1f2937;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.app-header p {
+    margin: 0;
+    color: #4b5563;
+}
+
+.input-card,
+.result-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+.input-card label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.input-card input {
+    width: 100%;
+    padding: 13px;
+    font-size: 17px;
+    border: 1px solid #b8c1cc;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.input-card input:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#calculateButton {
+    background: #2563eb;
+    color: white;
+}
+
+#clearButton {
+    background: #d1d5db;
+    color: #111827;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.result-card h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.result-row strong {
+    text-align: right;
+}
+
+.message-box {
+    min-height: 24px;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    color: #b91c1c;
+}
+
+.app-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 12px;
+    }
+
+    .app-header h1 {
+        font-size: 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
